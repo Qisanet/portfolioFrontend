@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa";
-import "../style/ProjectCard.css";
+import "../style/projectCard.css";
 import PropTypes from "prop-types";
 
 const ProjectCard = ({ 
