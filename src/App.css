@@ -1,0 +1,114 @@
+/* @import "tailwindcss";
+@plugin "daisyui"; */
+
+/* Global Styles */
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
+
+  box-sizing: border-box;
+  scroll-behavior: smooth; 
+  background-color:#0d0111;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+ 
+  background-color:#0d0111 ;
+  position: sticky;
+
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Page Styles */
+section{
+ 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  background-color: #0d0111;
+  color: #d3d3d3;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .social-links {
+  list-style: none;
+  padding: 0;
+}
+
+footer .social-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer .social-links a {
+  color: #d3d3d3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer .social-links a:hover {
+  color: #f89196; /* Example hover color */
+}
+
+footer .footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-nav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer .footer-nav a {
+  color: #d3d3d3;
+  text-decoration: none;
+}
+
+footer .footer-nav a:hover {
+  color: #f89196; /* Example hover color */
+}
+
+

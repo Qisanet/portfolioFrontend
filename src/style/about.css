@@ -1,0 +1,163 @@
+/* .skills-grid {
+  display: flex;
+  overflow: hidden; 
+  gap: 50px;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.skill-card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: moveIcons 5s linear infinite;
+}
+
+.skill-icon {
+  font-size: 80px; 
+}
+
+.skill-name {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white; 
+}
+
+
+@keyframes moveIcons {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+} */
+
+.skills-section {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+  white-space: nowrap;
+}
+
+.skills-marquee {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.skills-track {
+  display: flex;
+  gap: 30px;
+  animation: scrollLeft 10s linear infinite;
+  width: calc(220px * 25); /* Adjust based on skill count */
+}
+
+.skill-card {
+  display: inline-block;
+  min-width: 120px;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.skill-icon-container {
+  border: 2px solid #ccc; /* Add a border around each icon */
+  border-radius: 8px; /* Optional: round the corners of the border */
+  padding: 20px; /* Optional: add padding around the icon */
+  box-shadow: 0px 8px 12px rgb(241, 70, 70); /* Add a subtle shadow */
+  transition: all 0.3s ease; 
+  margin: 10px;/* Smooth transition for hover effects */
+}
+
+.skill-icon-container:hover {
+  border-color: #0d7592; /* Change border color on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.aboutIntro {
+  font-size: 20px;
+  border: 2px solid rgb(165, 110, 110);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 800px;
+  padding: 20px;
+}
+
+.about-title {
+  font-size: 30px;
+}
+
+.about-text {
+  font-size: 20px;
+  border: 2px solid rgb(165, 110, 110);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 1000px;
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutIntro, .about-text {
+    width: 100%; /* Full width for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .about-title {
+    font-size: 24px; /* Adjust title font size */
+  }
+
+  .about-text {
+    font-size: 18px; /* Adjust text font size */
+  }
+
+  .skills-section {
+    padding: 10px; /* Adjust padding on smaller screens */
+  }
+
+  .skills-track {
+    width: 100%; /* Ensure skills track width adapts */
+  }
+
+  .skill-card {
+    min-width: 80px; /* Adjust skill card width for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutIntro, .about-text {
+    width: 100%; /* Ensure full width on mobile */
+    padding: 10px; /* Further reduce padding for mobile */
+  }
+
+  .about-title {
+    font-size: 20px; /* Further reduce title font size */
+  }
+
+  .about-text {
+    font-size: 16px; /* Further reduce text font size */
+  }
+
+  .skills-section {
+    padding: 5px; /* Further reduce padding for mobile */
+  }
+
+  .skills-track {
+    width: 100%; /* Make sure the skills track takes full width */
+  }
+
+  .skill-card {
+    min-width: 60px; /* Further adjust skill card width for small screens */
+  }
+}

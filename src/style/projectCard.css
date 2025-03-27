@@ -1,0 +1,131 @@
+.projects {
+  padding: 50px;
+  text-align: center;
+}
+
+.projects h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 100px; /* Increased space between grid items */
+  justify-items: center; /* Center align grid items */
+  margin: 0 auto;
+  max-width: 1200px; /* Limiting maximum width */
+}
+
+.project-card {
+  border: 2px solid rgb(212, 90, 90);
+  border-radius: 8px;
+  box-shadow: 0 10px 8px rgba(221, 95, 95, 0.744);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  padding: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(231, 89, 89, 0.668);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+.project-card p {
+  padding: 12px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+}
+
+.project-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: 2px solid rgb(197, 135, 135);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+  box-shadow: 0 10px 8px rgba(226, 76, 76, 0.744);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .project-list {
+    gap: 50px; /* Reduced gap for medium screens */
+  }
+
+  .project-card {
+    max-width: 600px; /* Smaller max-width for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 30px; /* Reduced padding on smaller screens */
+  }
+
+  .projects h1 {
+    font-size: 1.5rem; /* Smaller heading on smaller screens */
+  }
+
+  .project-list {
+    gap: 30px; /* Smaller gap for smaller screens */
+    grid-template-columns: 1fr; /* Display items in a single column */
+  }
+
+  .project-card {
+    max-width: 100%; /* Make card full width */
+    padding: 15px; /* Reduced padding */
+  }
+
+  .project-card img {
+    height: 150px; /* Smaller image height */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 20px; /* Even smaller padding on mobile screens */
+  }
+
+  .projects h1 {
+    font-size: 1.2rem; /* Smaller heading for mobile */
+  }
+
+  .project-list {
+    gap: 20px; /* Minimal gap on mobile */
+    grid-template-columns: 1fr; /* Ensure single column layout */
+  }
+
+  .project-card {
+    padding: 10px; /* Less padding on mobile */
+  }
+
+  .project-card img {
+    height: 120px; /* Even smaller image height */
+  }
+}
