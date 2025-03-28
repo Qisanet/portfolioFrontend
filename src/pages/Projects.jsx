@@ -8,7 +8,7 @@ const Projects = () => {
 
   useEffect(() => {
     // Fetch projects from the backend
-    axios.get('https://portfoliobackend-2-7wi5.onrender.com/projects')
+    axios.get('https://portfoliobackend-3-31l1.onrender.com/projects')
       .then((response) => setProjects(response.data))
       .catch((error) => console.error('Error fetching projects:', error));
   }, []);

@@ -19,7 +19,7 @@ const AdminDashboard = () => {
     const fetchMessages = async () => {
       try {
         const token = localStorage.getItem('token'); // Get admin token
-        const response = await axios.get('https://portfoliobackend-2-7wi5.onrender.com/contact', {
+        const response = await axios.get('https://portfoliobackend-3-31l1.onrender.com/contact', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setMessages(response.data); // Store messages in state
@@ -53,7 +53,7 @@ const AdminDashboard = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.post('https://portfoliobackend-2-7wi5.onrender.com/projects', projectData, {
+      await axios.post('https://portfoliobackend-3-31l1.onrender.com/projects', projectData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Project added successfully!');
