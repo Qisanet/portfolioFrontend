@@ -29,7 +29,7 @@ const AboutMe = () => {
         </p>
 
         <div className="skills-section">
-          <h3 className="skills-title">Skills</h3>
+          <h3 className="skills-title">My Skills</h3>
           <div className="skills-marquee">
             <div className="skills-track">
               {[...skills, ...skills].map((skill, index) => (
