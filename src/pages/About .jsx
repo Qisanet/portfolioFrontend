@@ -25,7 +25,7 @@ const AboutMe = () => {
       <section id="about">
         <h2 className="about-title">About Me</h2>
         <p className="aboutIntro">
-          Hi, I'm Qisanet, a passionate full-stack web developer. With experience in both front-end and back-end technologies, I specialize in building scalable, user-friendly applications. I'm always eager to learn new skills and improve my craft. Here are some of the key skills and technologies I work with:
+          Hi, I'm Qisanet, a passionate Full-Stack Web Developer. With experience in both front-end and back-end technologies, I specialize in building scalable, user-friendly applications. I'm always eager to learn new skills and improve my craft. Here are some of the key skills and technologies I work with:
         </p>
 
         <div className="skills-section">
