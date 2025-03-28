@@ -161,3 +161,16 @@
     min-width: 60px; /* Further adjust skill card width for small screens */
   }
 }
+@media (max-width: 768px) {
+  .skill-card {
+    width: 80px;
+  
+  }
+  .skill-icon-container svg {
+    width: 30px;
+    height: 40px;
+  }
+  .about-title {
+    font-size: 24px;
+  }
+}
