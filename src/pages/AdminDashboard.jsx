@@ -69,7 +69,7 @@ const AdminDashboard = () => {
     <div className="admin-dashboard">
       <h1>Admin Dashboard</h1>
       
-      {/* Form for adding projects */}
+      {/*for adding projects */}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
