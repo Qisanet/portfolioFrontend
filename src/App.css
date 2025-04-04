@@ -1,14 +1,11 @@
-/* @import "tailwindcss";
-@plugin "daisyui"; */
-
 /* Global Styles */
 body {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-
-
+  font-family: Georgia, 'Times New Roman', Times, serif;
   box-sizing: border-box;
-  scroll-behavior: smooth; 
-  background-color:#0d0111;
+  scroll-behavior: smooth;
+
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar Styles */
@@ -17,17 +14,17 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
- 
-  background-color:#0d0111 ;
   position: sticky;
-
   top: 0;
   z-index: 1000;
+
 }
 
 .navbar-brand {
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .navbar-links {
@@ -42,73 +39,57 @@ body {
 }
 
 .navbar-links a:hover {
-  text-decoration: underline;
+
 }
 
-/* Page Styles */
-section{
- 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+
+  
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 10px;
+   
+  }
+
+  .menu-toggle {
+    display: block;
+    width: 30px;
+    height: 50px;
+    background-color: #ffffff00;
+
+   
+  }
+}
+.footer-content{
   text-align: center;
 }
-
-footer {
-  background-color: #0d0111;
-  color: #d3d3d3;
-  padding: 20px 0;
-  text-align: center;
-}
-
-footer .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer .social-links {
-  list-style: none;
-  padding: 0;
-}
-
-footer .social-links li {
-  display: inline;
-  margin: 0 10px;
-}
-
-footer .social-links a {
-  color: #d3d3d3;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer .social-links a:hover {
-  color: #f89196; /* Example hover color */
-}
-
-footer .footer-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer .footer-nav li {
-  display: inline;
-  margin: 0 10px;
-}
-
-footer .footer-nav a {
-  color: #d3d3d3;
-  text-decoration: none;
-}
-
-footer .footer-nav a:hover {
-  color: #f89196; /* Example hover color */
-}
-
-

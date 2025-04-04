@@ -1,98 +1,131 @@
 /* Global Styles */
 body {
-    background-color: #0d0111; /* Dark background */
-    color: #fff; /* White text color globally */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    
-  }
-  
-  
-  /* .myHome Container */
-  .myHome {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    margin-top: -20px;
-  }
-  
-  /* HomeIntro Styles */
-  .HomeIntro {
-    text-align: start;
-    color: #fff;
-    margin-top: 70px;
-  }
-  
-  .HomeIntro h1 {
-    font-size: 2.5rem;
-    margin: 0;
-  }
-  
-  .HomeIntro h2 {
-    font-size: 1.8rem;
-  }
-  
-  .HomeIntro h3 {
-    font-size: 1.2rem;
-    margin-top: 10px;
-  }
-  
-  /* Styling for Image */
-  .homeImg img {
-    margin-top: 30px;
-    width: 480px;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid rgb(223, 197, 198);
-    box-shadow: 20px 20px 10px rgba(228, 98, 98, 0.981); /* Soft purple shadow */
-    animation: boxShadowAnimation 2s infinite; /* Apply the animation here */
-  }
-  
-  /* Box Shadow Animation */
-  @keyframes boxShadowAnimation {
-    0% {
+  background-color: #0d0111; /* Dark background */
+  color: #fff; /* White text color globally */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* .myHome Container */
+.myHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center the content horizontally */
+  padding: 20px;
+  margin-top: -80px;
+}
+
+/* HomeIntro Styles */
+.HomeIntro {
+  text-align: center;
+  color: #fff;
+  margin-top: 0px;
+}
+
+.HomeIntro h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.HomeIntro h2 {
+  font-size: 1.5rem;
+}
+
+.HomeIntro h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Styling for Image */
+.homeImg img {
+  align-items: center;
+  width: 350px;
+  height: auto;
+  border-radius: 900px;
+  border: 2px solid rgb(223, 197, 198);
+  box-shadow: 2px 2px 1px rgba(228, 98, 98, 0.981); /* Soft purple shadow */
+  animation: boxShadowAnimation 2s infinite; /* Apply the animation here */
+}
+.homeImg img { 
+  display: block;
+  margin: auto; /* Center the image */
+  width: 350px;
+  height: auto;
+  border-radius: 900px;
+  border: 2px solid rgb(223, 197, 198);
+  box-shadow: 0px 0px 20px 8px rgba(228, 98, 98, 0.7);
+  animation: boxShadowAnimation 2s infinite;  /* Glow effect */
+}
+
+
+/* Box Shadow Animation */
+@keyframes boxShadowAnimation {
+  100% {
       box-shadow: 0px 0px 15px rgba(206, 77, 131, 0.2); /* Start with a soft shadow */
-    }
-    50% {
-      box-shadow: 30px 30px 50px rgb(243, 111, 111); /* Make the shadow larger and more pronounced */
-    }
-    100% {
-      box-shadow: 0px 0px 15px rgba(206, 95, 125, 0.2); /* Return to the soft shadow */
-    }
   }
-  
-  .homeImg img:hover {
-    transform: scale(1.1); /* Zoom in effect */
+  500% {
+      box-shadow: 3px 3px 15px rgb(243, 111, 111); /* Make the shadow larger and more pronounced */
   }
-  
-  /* Slide-In Animation */
-  @keyframes slideIn {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  100% {
+      box-shadow: 0px 0px 10px rgba(206, 95, 125, 0.2); /* Return to the soft shadow */
   }
-  
-  .HomeIntro h1,
-  .HomeIntro h2,
-  .HomeIntro h3 {
-    animation: slideIn 2s ease-out;
-  }
-  
-  /* Styling for Section */
-  #home {
-    margin-top: -60px; /* Reduce the top margin to bring it higher */
-    padding-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh; /* Make the section take full viewport height */
-  }
-  
-  
+}
+
+
+.HomeIntro h1,
+.HomeIntro h2,
+.HomeIntro h3 {
+  animation: slideIn 2s ease-out;
+}
+
+/* Styling for Section */
+#home {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  height: 100vh; /* Make the section take full viewport height */
+}
+
+/* Styling for Buttons */
+.cv-button, .hire-button {
+  display: flex;
+  align-items: center;
+  color: #fff; /* Light text color */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  border: 2px solid rgb(226, 142, 142);
+
+}
+.hire-button {
+  box-shadow: 2px 2px 10px rgba(228, 98, 98, 0.981);
+}
+
+.cv-button {
+  width: 40px;
+  height: 20px;
+}
+
+.hire-button {
+  width: 80px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+/* Button Hover Effect */
+.cv-button:hover, .hire-button:hover {
+  box-shadow: 2px 2px 10px rgba(228, 98, 98, 0.981); /* Lighter shade when hovering */
+}
+
+/* Centering the Button Container */
+.link {
+  display: flex;
+  justify-content: center; /* Horizontally center the buttons */
+  align-items: center; /* Vertically center the buttons */
+  gap: 20px; /* Add space between buttons */
+}

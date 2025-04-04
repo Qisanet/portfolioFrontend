@@ -9,19 +9,21 @@ import Contact from './pages/Contact';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import SparklingStars from "./components/SparklingStars";
 import './App.css';
 
 const App = () => {
   return (
     <Router>
+       <SparklingStars />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Page />} /> {/* Default route */}
-        <Route path="/home" element={<Home />} /> {/* Default route */}
+        <Route path="/" element={<Page />} /> 
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin/login" element={<AdminLogin />} /> {/* Admin login route */}
+        <Route path="/admin/login" element={<AdminLogin />} />
         <Route
           path="/admin/dashboard"
           element={

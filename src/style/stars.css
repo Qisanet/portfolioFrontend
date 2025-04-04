@@ -1,0 +1,47 @@
+/* Star container */
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Ensures clicks go through */
+    overflow: hidden;
+    z-index: 9999;
+  }
+  
+  /* Star appearance */
+  .star {
+    position: absolute;
+    color:rgb(255, 255, 255);
+    opacity: 0;
+    animation: sparkle 3s infinite ease-in-out;
+  }
+  
+  /* Different sizes for stars */
+  .star.small {
+    font-size: 8px;
+  }
+  .star.medium {
+    font-size: 12px;
+  }
+  .star.large {
+    font-size: 18px;
+  }
+  
+  /* Twinkle and rotation */
+  @keyframes sparkle {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5) rotate(360deg);
+    }
+  }
+  

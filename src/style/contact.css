@@ -1,32 +1,40 @@
 .contact {
   padding: 50px;
+  text-align: center;
 }
 
 .contact h1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #ffffff; /* A soft pink to match the theme */
+  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 form {
-  display: grid;
-  text-align: start;
-  grid-template-columns: 1fr;
-  gap: 5px;
-  border: 2px solid rgb(238, 175, 175);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
   margin: 0 auto;
-  width: 500px;
   padding: 30px;
+  border: 2px solid rgb(238, 175, 175);
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(224, 135, 135, 0.2);
 }
 
-input, textarea {
-  width: 90%;
-  padding: 10px;
+label {
+  align-self: flex-start;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
   font-size: 1rem;
   border-radius: 5px;
   border: 2px solid #d16d6d;
@@ -34,8 +42,10 @@ input, textarea {
   transition: border 0.3s ease;
 }
 
-input:focus, textarea:focus {
-  border: 2px solid #ff7c7c; /* Focus state with the same accent color */
+input:focus,
+textarea:focus {
+  border: 2px solid #ff7c7c;
+  outline: none;
 }
 
 textarea {
@@ -58,58 +68,48 @@ button {
 
 button:hover {
   background-color: #ff7c7c;
-  transform: translateY(-5px);
-}
-
-form .message-success {
-  color: green;
-  font-size: 1rem;
-  margin-top: 15px;
+  transform: translateY(-3px);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .contact h1 {
-    font-size: 2rem; /* Adjust header font size */
-    margin-bottom: 20px; /* Reduce bottom margin */
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
 
   form {
-    width: 90%; /* Adjust form width for smaller screens */
-    padding: 20px; /* Adjust padding */
+    width: 95%;
+    padding: 20px;
   }
 
-  input, textarea {
-    width: 100%; /* Make inputs take full width */
-    padding: 12px; /* Increase padding */
-    font-size: 1.1rem; /* Adjust font size */
+  input,
+  textarea {
+    font-size: 1.1rem;
   }
 
   button {
-    padding: 15px 30px; /* Increase button padding */
-    font-size: 1.1rem; /* Adjust button font size */
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
   .contact h1 {
-    font-size: 1.8rem; /* Further reduce font size */
-    margin-bottom: 15px; /* Further reduce margin */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
 
   form {
-    width: 100%; /* Full width on mobile */
-    padding: 15px; /* Further reduce padding */
+    width: 100%;
+    padding: 15px;
   }
 
-  input, textarea {
-    width: 100%; /* Ensure inputs take full width */
-    padding: 12px; /* Increase padding for better touch targets */
-    font-size: 1.2rem; /* Adjust font size */
+  input,
+  textarea {
+    font-size: 1.2rem;
   }
 
   button {
-    padding: 15px 30px; /* Increase padding */
-    font-size: 1.2rem; /* Increase font size */
+    font-size: 1.2rem;
   }
 }
