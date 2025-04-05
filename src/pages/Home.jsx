@@ -24,7 +24,7 @@ const Home = () => {
                 CV <i className="fas fa-download"></i> 
               </a>
 
-              <a href="mailto:your-email@example.com" className="hire-button">
+              <a href="mailto:ksanetang.com" className="hire-button">
   Hire Me
 </a>
 
